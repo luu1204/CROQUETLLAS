@@ -1,0 +1,20 @@
+<main>
+<h1>Todos los productos</h1>
+<div class="card-container">
+{{#each products}}
+    <article class="card-productos">
+        <img class="card-foto" src="{{this.image}}" alt="Foto">
+        <h2>{{this.name}}</h2>
+        {{#if this.isNew }}
+        <small>Es nuevo</small>
+        <div class="container-price">
+        <p>{{this.price}}€</p>
+        <a href="/product/oneProduct/{{this._id}}"> <button class="button-detalles"><p class="p-detalles">Detalles</p></button></a>
+        </div>
+        {{else}}
+        <small>Es de segunda mano</small>
+        {{/if}}
+    </article>
+{{/each}}
+</div>
+</main>

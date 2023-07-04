@@ -1,0 +1,13 @@
+<div class="profile">
+<h1 class="title-bienvenido"> Bienvenido {{username}}</h1>
+<h2>Productos creados</h2>
+</div>
+
+<section class="container-profile">
+<div class="card-productos">
+    {{#each products}}
+    <img class="card-foto" src="{{this.image}}" alt="Foto">
+    <p>{{this.name}}</p>
+    {{/each}}
+</div>
+</section>

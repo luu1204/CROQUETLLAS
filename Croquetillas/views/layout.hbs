@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>{{appTitle}}</title>
+      <link rel="stylesheet" href="/stylesheets/style.css"/>
+      <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+   </head>
+
+   <body>
+      <nav>
+      <div class="nav-container">
+            <img class="logo" src="/images/logo.png" alt="foto">
+            <div class="nav2">
+            <a href="/">Inico</a>
+            <a href="/product/all">Productos</a>
+         {{#if isUserActive}}
+            <a href="/product/create">Crear</a>
+            <a href="/user/profile">Profile</a>
+         </div>
+            <div><a href="/auth/logout"> <img class="exit" src="/images/exit.svg" alt=""></a>
+         
+         {{else}}
+            <a href="/auth/register">Regístrate</a>
+
+         <div class="usuario-container-"><a href="/auth/login"><img class="logo-iSesion" src="/images/usuario.svg" alt=""></a></div>
+         {{/if}}
+      </div>
+      </nav>
+      {{{body}}}
+      <footer>
+         <img src="/images/flecha.json" alt="">  <a  href="/">Política de envío</a>
+            <a href="/">Política de cookies</a>
+            <a href="/">Terminos y condiciones</a>
+            <a href="/">Recursos</a>
+      </footer>
+
+      <script src="/js/script.js"></script>
+   </body>
+
+</html>

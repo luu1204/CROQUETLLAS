@@ -1,0 +1,24 @@
+<div class="gato">
+<section class="section-register">
+<form class="register-container" action="/auth/register" method="post">
+<h1 class="register-text">Regístrate</h1>
+
+    <div class="input-container">
+        <label class="username">Username</label>
+        <input class="input-login" type="text" name="username">
+        <img class="img-login" src="../images/us.svg" alt="logo">
+    </div>
+
+    <div class="input-container">
+    <label class="password">Contraseña</label>
+    <input  class="input-login" type="password" name="password">
+    <img class="img-login" src="../images/contraseña.svg" alt="">
+    </div>
+    
+    {{#if err}}
+    <p class="err">{{err}}</p>
+    {{/if}}
+    <button class="register-button">Regístrate<img class="huella" src="../images/huella.png" alt="huella"> </button>
+</form>
+</section>
+</div>

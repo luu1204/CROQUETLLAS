@@ -1,0 +1,43 @@
+{{!-- <div class="gato">
+<h1>login</h1>
+{{#if err}}
+    <p>{{err}}</p>
+{{/if}}
+<form action="/auth/login" method="post">
+<label>
+        Username
+        <input type="text" name="username">
+    </label>
+    
+
+    <label>
+        Password
+        <input type="password" name="password">
+    </label>
+    <button>Login</button>
+</form>
+</div> --}}
+<div class="gato">
+<section class="section-register">
+<form class="register-container" action="/auth/login" method="post">
+<h1 class="register-text">Inicio sesión</h1>
+
+    <div class="input-container">
+        <label class="username">Username</label>
+        <input class="input-login" type="text" name="username">
+        <img class="img-login" src="../images/us.svg" alt="logo">
+    </div>
+
+    <div class="input-container">
+    <label class="password">Contraseña</label>
+    <input  class="input-login" type="password" name="password">
+    <img class="img-login" src="../images/contraseña.svg" alt="">
+    </div>
+    
+    {{#if err}}
+    <p class="err">{{err}}</p>
+    {{/if}}
+    <button class="register-button">Inicia sesión<img class="huella" src="../images/huella.png" alt="huella"> </button>
+</form>
+</section>
+</div>
